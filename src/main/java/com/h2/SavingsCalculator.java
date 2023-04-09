@@ -20,7 +20,7 @@ public class SavingsCalculator {
         return sum;
     }
 
-    private float sumOgDebits() {
+    private float sumOfDebits() {
         float sum = 0.0f;
         for(float debit: debits) {
             sum += debit;
@@ -36,7 +36,7 @@ public class SavingsCalculator {
     }
 
     public float calculate() {
-        return sumOfCredits() - sumOgDebits();
+        return sumOfCredits() - sumOfDebits();
     }
 
     public static void main(String[] args) {
@@ -56,8 +56,6 @@ public class SavingsCalculator {
 
         final SavingsCalculator calculator = new SavingsCalculator(credits, debits);
         float netSavings = calculator.calculate();
-        System.out.println(
-                "Net Savings = " + netSavings + ", remaining days in month = " + remainingDaysInMonth(LocalDate.now()));
+        System.out.println("Net Savings = " + netSavings + ", remaining days in month = " + remainingDaysInMonth(LocalDate.now()));
     }
-
 }
