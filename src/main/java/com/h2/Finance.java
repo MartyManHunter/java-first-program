@@ -58,4 +58,4 @@ public class Finance {
 
         executeCommand(command, Arrays.copyOfRange(args, 1, args.length));
     }
-} 
+}
